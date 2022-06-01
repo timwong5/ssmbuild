@@ -1,6 +1,7 @@
 package com.timwang5.service;
 
 import com.timwang5.pojo.Books;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -16,6 +17,9 @@ public interface bookService {
     Books queryBookById(int id);
     //查询全部Book,返回list集合
     List<Books> queryAllBook();
+
+    //根据书名查询书籍
+    Books queryBookByName(@Param("bookName") String name);
 
 
 }

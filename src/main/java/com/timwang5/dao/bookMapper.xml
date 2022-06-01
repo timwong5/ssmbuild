@@ -16,18 +16,29 @@
 
     <update id="updateBook" parameterType="Books">
         update ssmbuild.books
-            set bookName = #{bookName} ,bookCounts=#{bookCounts}, detail = #{detail}
+        set bookName  = #{bookName},
+            bookCounts=#{bookCounts},
+            detail    = #{detail}
         where bookID = #{bookID};
     </update>
 
     <select id="queryBookById" resultType="Books">
-        select * from ssmbuild.books
+        select *
+        from ssmbuild.books
         where bookID = #{bookID}
     </select>
 
     <!--查询全部Book-->
     <select id="queryAllBook" resultType="Books">
-        SELECT * from ssmbuild.books
+        SELECT *
+        from ssmbuild.books
+    </select>
+
+    <!--    根据书名查询书籍-->
+    <select id="queryBookByName" resultType="Books">
+        select *
+        from ssmbuild.books
+        where bookName = #{bookName}
     </select>
 
 
