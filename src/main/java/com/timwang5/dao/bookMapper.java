@@ -22,5 +22,5 @@ public interface bookMapper {
     List<Books> queryAllBook();
 
     //根据书名查询书籍
-    Books queryBookByName(@Param("bookName") String name);
+    Books queryBookByName(@Param("bookName")String bookName);
 }

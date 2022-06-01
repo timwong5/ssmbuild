@@ -40,7 +40,7 @@ public class bookServiceImpl implements bookService{
     }
 
     @Override
-    public Books queryBookByName(String name) {
-        return bookMapper.queryBookByName(name);
+    public Books queryBookByName(String bookName) {
+        return bookMapper.queryBookByName(bookName);
     }
 }

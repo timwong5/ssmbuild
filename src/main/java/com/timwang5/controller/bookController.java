@@ -68,16 +68,17 @@ public class bookController {
         return "redirect:/book/allBook";
     }
 
+    //query
     @RequestMapping("/queryBook")
-    public String queryBook(String bookName, Model model){
-        Books books = bookService.queryBookByName(bookName);
-        System.out.println(books);
+    public String queryBook(String queryBookName,Model model){
+        Books books = bookService.queryBookByName(queryBookName);
         List<Books> queryBook = new ArrayList<Books>();
         queryBook.add(books);
-        if(books == null){
+        if(books==null){
             queryBook = bookService.queryAllBook();
             model.addAttribute("error","查询书籍不存在");
         }
+
         model.addAttribute("list",queryBook);
         return "allBook";
     }
