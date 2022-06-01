@@ -39,8 +39,9 @@
 
                 <div class="col-md-4 column">
                     <form action="${pageContext.request.contextPath}/book/queryBook" method="post" style="float: right">
+                        <%--                        前端传入的name要和controller的参数 bookName 保持一致--%>
                         <input type="text" name="queryBookName" class="from-control" placeholder="请输入要查询的书籍">
-                        <input type="submit" value="查询" class="btn btn-primary"  >
+                        <input type="submit" value="查询" class="btn btn-primary">
                     </form>
                 </div>
             </div>

@@ -70,6 +70,7 @@ public class bookController {
 
     //query
     @RequestMapping("/queryBook")
+    //前端传入的name要和controller的参数 bookName 保持一致
     public String queryBook(String queryBookName,Model model){
         Books books = bookService.queryBookByName(queryBookName);
         List<Books> queryBook = new ArrayList<Books>();
